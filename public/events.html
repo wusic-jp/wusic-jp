@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180682229-1"></script>
+    <script src="./script/ncmb.min.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180682229-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <title>イベント情報 | 女子大学生ICT駆動ソーシャルイノベーションコンソーシアム</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&;900display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- firebase library import -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+    <div class="site-box">
+        <div id="header">
+            <a href="/">
+                <h1><img src="img/header-logo.png" alt="女子大学生ICT駆動ソーシャルイノベーションコンソーシアム" class="header-logo"></h1>
+            </a>
+            <a href="https://twitter.com/wusicJP" target="_blank" class="twitter"><img src="img/twitter.png" alt="Twitter"></a>
+            <a href="https://wusic.hatenablog.com" target="_blank" class="twitter"><img src="img/blog.png" alt="Blog"></a>
+            <a href="entry.html"><input type="button" value="参加申し込み"></a>
+            <ul>
+                <li><a href="index.html#our-consortium">コンソーシアムについて</a></li>
+                <li><a href="index.html#benefits">メリット</a></li>
+                <li><a href="index.html#members">会員一覧</a></li>
+                <li style="border-right:0px"><a href="index.html#event-information">イベント</a></li>
+            </ul>
+        </div>
+        <div id="contact">
+            <p>連絡先| wusic@googlegroups.com</p>
+            <p>問い合わせ窓口|WUSIC事務局</p>
+        </div>
+        <div id="hero" class="entry-hero">
+            <h2><img src="img/event-hero.png" alt="entry" class="hero-img"></h2>
+        </div>
+    </div>
+    <div class="events-sections" id="events-generated-html">
+        <!-- ここにイベント情報が入る -->
+    </div>
+    <div class="spacer"></div>
+    <div id="footer" class="bg-footer">
+        <div class="footer-content site-box">
+            <div class="footer-left-block">
+                <div class="conversion-block footer-conversion">
+                    <a href="https://inquiry.nifcloud.com/webeq/pub/mbaas/wusic-ebook" target="_blank">
+                        <div class="conversion conversion-document">
+                            <img src="img/conversion-document.png" alt="conversion-icon" class="conversion-document-icon">
+                            <p>資料のダウンロードはこちら</p>
+                            <img src="img/conversion-arrow.png" alt="conversion-arrow" class="conversion-arrow">
+                        </div>
+                    </a>
+                    <a href="entry.html">
+                        <div class="conversion conversion-entry">
+                            <img src="img/conversion-entry.png" alt="conversion-icon" class="conversion-entry-icon">
+                            <p>参加申し込みはこちら</p>
+                            <img src="img/conversion-arrow.png" alt="conversion-arrow" class="conversion-arrow">
+                        </div>
+                    </a>
+                </div>
+                <div class="footer-logo">
+                    <img src="img/footer-logo.png" alt="footer-logo">
+                    <p>連絡先| wusic@googlegroups.com<br>
+                        問い合わせ窓口| WUSIC事務局</p>
+                </div>
+            </div>
+            <div class="footer-right-block">
+                <a class="twitter-timeline" href="https://twitter.com/wusicJP?ref_src=twsrc%5Etfw">Tweets by wusicJP</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+        <div class="copyright">
+            <a href="#">
+                <img src="img/to-top.png" alt="to-top">
+            </a>
+            <div class="copy-bar">
+                <p>&copy;女子大学生ICT駆動ソーシャルイノベーションコンソーシアム</p>
+            </div>
+        </div>
+    </div>
+    <script src="./script/insert_event_full.js"></script>
+</body></html>

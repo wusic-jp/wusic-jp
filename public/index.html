@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180682229-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180682229-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <title>女子大学生ICT駆動ソーシャルイノベーションコンソーシアム</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&;900display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- firebase library import -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+    <div class="site-box">
+        <div id="header">
+            <a href="/">
+                <h1><img src="img/header-logo.png" alt="女子大学生ICT駆動ソーシャルイノベーションコンソーシアム" class="header-logo"></h1>
+            </a>
+            <a href="https://twitter.com/wusicJP" target="_blank" class="twitter"><img src="img/twitter.png" alt="Twitter"></a>
+            <a href="https://wusic.hatenablog.com" target="_blank" class="twitter"><img src="img/blog.png" alt="Blog"></a>
+            <a href="entry.html"><input type="button" value="参加申し込み"></a>
+            <ul>
+                <li><a href="#our-consortium">コンソーシアムについて</a></li>
+                <li><a href="#benefits">メリット</a></li>
+                <li><a href="#members">会員一覧</a></li>
+                <li style="border-right:0px"><a href="#event-information">イベント</a></li>
+            </ul>
+        </div>
+        <div id="contact">
+            <p>連絡先| wusic@googlegroups.com</p>
+            <p>問い合わせ窓口|WUSIC事務局</p>
+        </div>
+        <div id="hero">
+            <div class="heroimage"></div>
+            <h2><img src="img/hero-image.png" alt="Hello, World!" class="hero-img"></h2>
+            <div class="slideshow-wrap">
+                <ul class="slideshow">
+                    <li><img src="img/logos/adobe.png" alt="adobe"></li>
+                    <li><img src="img/logos/asial.png" alt="asial"></li>
+                    <li><img src="img/logos/kassui-joshi.jpg" alt="活水女子大学"></li>
+                    <li><img src="img/logos/nihon-joshi.png" alt="日本女子大学"></li>
+                    <li><img src="img/logos/tokyo-joshi.png" alt="東京女子大学"></li>
+                    <li><img src="img/logos/tuda-juku.png" alt="津田塾大学"></li>
+                    <li><img src="img/logos/fjct.png" alt="fjct"></li>
+                    <li><img src="img/logos/kasei.png" alt="東京家政大学"></li>
+                    <li><img src="img/logos/otsuma.jpg" alt="大妻女子大学"></li>
+                    <li><img src="img/logos/LAC-CyberLink.jpg" alt="ラックサイバーリンク"></li>
+                    <li><img src="img/logos/fj.jpg" alt="富士通"></li>
+                </ul>
+                <ul class="slideshow">
+                    <li><img src="img/logos/adobe.png" alt="adobe"></li>
+                    <li><img src="img/logos/asial.png" alt="asial"></li>
+                    <li><img src="img/logos/kassui-joshi.jpg" alt="活水女子大学"></li>
+                    <li><img src="img/logos/nihon-joshi.png" alt="日本女子大学"></li>
+                    <li><img src="img/logos/tokyo-joshi.png" alt="東京女子大学"></li>
+                    <li><img src="img/logos/tuda-juku.png" alt="津田塾大学"></li>
+                    <li><img src="img/logos/fjct.png" alt="fjct"></li>
+                    <li><img src="img/logos/kasei.png" alt="東京家政大学"></li>
+                    <li><img src="img/logos/otsuma.jpg" alt="大妻女子大学"></li>
+                    <li><img src="img/logos/LAC-CyberLink.jpg" alt="ラックサイバーリンク"></li>
+                    <li><img src="img/logos/fj.jpg" alt="富士通"></li>
+                </ul>
+            </div>
+            <img src="img/arrow.png" alt="矢印" class="hero-arrow">
+            <div class="philosophy">
+                <div class="philosophy-block philosophy-left">
+                    <img src="img/philosophy-head.png" alt="philosophy-head">
+                    <h3 class="philosophy-title">01</h3>
+                    <div class="phylosophy-underline"></div>
+                    <p class="philosophy-body">広い分野の学生が、社会に求められるイノベーションを考え、ICTを通じて実現することを実践的に学ぶ機会を提供します。</p>
+                </div>
+                <div class="philosophy-block philosophy-center">
+                    <img src="img/philosophy-head.png" alt="philosophy-head">
+                    <h3 class="philosophy-title">02</h3>
+                    <div class="phylosophy-underline"></div>
+                    <p class="philosophy-body">産業界との連携を推進し、あらゆる分野の学生がICTを活用する知識やサービス産業に関する理解を深める機会を提供します。</p>
+                </div>
+                <div class="philosophy-block philosophy-right">
+                    <img src="img/philosophy-head.png" alt="philosophy-head">
+                    <h3 class="philosophy-title">03</h3>
+                    <div class="phylosophy-underline"></div>
+                    <p class="philosophy-body">産業界には現代の学生について理解を深め、学生にどのように社会に貢献できるかを誘発する機会を提供します。</p>
+                </div>
+            </div>
+            <div class="philosophy-lead">
+                <div class="philosophy-lead-row1">
+                    <p>産業界と連携しながら、Society 5.0を支える女性人材を育成していくことは、</p>
+                </div>
+                <div class="philosophy-lead-row2">
+                    <p>今後のわが国の将来の知識サービス産業の発展に向けて大いに寄与するものと考えます。</p>
+                </div>
+                <img src="img/arrow.png" alt="矢印" class="philosophy-arrow">
+            </div>
+        </div>
+        <div id="our-consortium">
+            <div class="section-head">
+                <h2>コンソーシアムについて</h2>
+                <img src="img/section-title-our-consortium.png" alt="セクションタイトル装飾">
+                <h3>Our Consortium</h3>
+            </div>
+            <div class="purpose">
+                <div class="purpose-square">
+                    <h4>コンソーシアム設立の目的</h4>
+                </div>
+                <div class="equal">
+                    <img src="img/equal.png" alt="equal">
+                </div>
+                <p>高度情報化した<br><span class="red">Society 5.0時代を牽引する女性リーダー</span>の育成</p>
+            </div>
+            <div class="our-consortium-boxes">
+                <div class="our-consortium-box left">
+                    <p class="title">女性活躍</p>
+                    <img src="img/our-consortium_1.png" alt="女性活躍">
+                    <p class="lead">社会で活躍できる女性を育成</p>
+                    <p class="desc-l">「働く女性が希望に応じて能力を十分に発揮できるダイバーシティ社会<br>を実現すべく、政府が目指す未来社会である「Society 5.0」の社会を<br>牽引する女性リーダーを育成</p>
+                </div>
+                <div class="our-consortium-box right">
+                    <p class="title">アプリ開発を通じたICTリテラシーの向上</p>
+                    <img src="img/our-consortium_2.png" alt="アプリ開発を通じたICTリテラシーの向上">
+                    <p class="lead">文系と理系の専門分野を問わず<br>女子大学生のICTプログラミングリテラシーの向上</p>
+                    <p class="desc-r">スマートフォンアプリ開発を通じてプログラムやクラウドの仕組みを<br>理解し、データのやり取りを把握でき、システムやサービスの設計や<br>開発体験をし、地に足の着いた提案ができる</p>
+                </div>
+            </div>
+            <div class="our-consortium-image">
+                <img src="img/our-consortium-image.png" alt="our consortium image">
+            </div>
+            <div class="conversion-block">
+                <a href="https://inquiry.nifcloud.com/webeq/pub/mbaas/wusic-ebook" target="_blank">
+                    <div class="conversion conversion-document">
+                        <img src="img/conversion-document.png" alt="conversion-icon" class="conversion-document-icon">
+                        <p>資料のダウンロードはこちら</p>
+                        <img src="img/conversion-arrow.png" alt="conversion-arrow" class="conversion-arrow">
+                    </div>
+                </a>
+                <a href="entry.html">
+                    <div class="conversion conversion-entry">
+                        <img src="img/conversion-entry.png" alt="conversion-icon" class="conversion-entry-icon">
+                        <p>参加申し込みはこちら</p>
+                        <img src="img/conversion-arrow.png" alt="conversion-arrow" class="conversion-arrow">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-benefits">
+        <div id="benefits" class="site-box">
+            <div class="section-head section-head-benefits">
+                <h2>メリット</h2>
+                <img src="img/section-title-benefits.png" alt="セクションタイトル装飾">
+                <h3>Benefits</h3>
+            </div>
+            <div class="benefits-wrapper">
+                <div class="benefits-box benefits-college">
+                    <div class="img-center">
+                        <img src="img/college.png" alt="大学">
+                    </div>
+                    <h4>協賛大学のメリット</h4>
+                    <ul>
+                        <li class="benefits-check">産学連携を通じ、実践的なICT活用能力を育む教育プログラムを提供できる</li>
+                        <li class="benefits-check">産学官連携を通して、実践的な能力を身に着けた学生を育成できる
+                            <ul>
+                                <li class="benefits-dot">学生のキャリア教育、就活指導の幅が広がる</li>
+                            </ul>
+                        </li>
+                        <li class="benefits-check">協賛企業/大学間でのコネクション強化</li>
+                        <li class="benefits-check">コンソーシアム活動に対する助成金、補助金、事業費の取得機会の拡大</li>
+                        <li class="benefits-check">最先端の技術知見・データ・教材等の導入</li>
+                    </ul>
+                </div>
+                <div class="benefits-box benefits-company">
+                    <div class="img-center company-img">
+                        <img src="img/company.png" alt="企業">
+                    </div>
+                    <h4>協賛企業のメリット</h4>
+                    <ul>
+                        <li class="benefits-check">産学官連携を通しての社会貢献および女性活躍社会の推進</li>
+                        <li class="benefits-check">
+                            ICT技術に対して前向きな学生とのマッチング（直接的なコネクションの実<br>　　　　現）
+                            <ul>
+                                <li class="benefits-dot">人材スカウト</li>
+                                <li class="benefits-dot">アプリ開発に興味があり、開発経験のある意欲的な学生とのマッチング</li>
+                                <li class="benefits-dot">文系の学問を修めながら開発経験もある、幅広い素質を持つ学生とのマッ<br>　　　 　　チング</li>
+                            </ul>
+                        </li>
+                        <li class="benefits-check">
+                            協賛企業/大学間でのコネクション強化
+                            <ul>
+                                <li class="benefits-dot">コンソーシアムを通じた情報交換</li>
+                                <li class="benefits-dot">IT企業、大学等間の連携スキーム、エコシステムの構築</li>
+                                <li class="benefits-dot">各社の提供システム・サービスの普及、利活用できる人材の拡大、教育教<br>　　　　　材の販売</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-box">
+        <div id="members">
+            <div class="section-head section-head-benefits">
+                <h2>会員一覧</h2>
+                <img src="img/section-title-benefits.png" alt="セクションタイトル装飾">
+                <h3>List of members</h3>
+            </div>
+            <div class="academy member-block member-college">
+                <h4>大学</h4>
+                <div class="member-headline"></div>
+                <div class="one-member">
+                    <h5>津田塾大学 総合政策学部 総合政策学科</h5>
+                    <ul>
+                        <li>曽根原 登 教授</li>
+                        <li>小舘 亮之 教授</li>
+                        <li>鈴木 貴久 特任助教</li>
+                        <li>Gavan P. Gray 准教授</li>
+                    </ul>
+                </div>
+                <div class="one-member">
+                    <h5>日本女子大学 理学部 数物科学科</h5>
+                    <ul>
+                        <li>長谷川 治久 教授</li>
+                    </ul>
+                </div>
+                <div class="one-member">
+                    <h5>東京女子大学 現代教養学部・心理コミュニケーション学科・コミュニケーション専攻</h5>
+                    <ul>
+                        <li>渡辺 隆行 教授</li>
+                    </ul>
+                </div>
+                <div class="one-member">
+                    <h5>活水女子大学</h5>
+                </div>
+                <div class="one-member">
+                    <h5>大妻女子大学 キャリア教育センター</h5>
+                    <ul><li>井上 俊也 教授</li></ul>
+                </div>
+                <div class="one-member last-member">
+                    <h5>東京家政大学 人文学部 英語コミュニケーション学科</h5>
+                    <ul><li>小池 新 教授</li></ul>
+                </div>
+            </div>
+            <div class="industry member-block member-block-center member-company">
+                <h4>産業界</h4>
+                <div class="member-headline"></div>
+                <div class="one-member">
+                    <h5>富士通株式会社</h5>
+                </div>
+                <div class="one-member">
+                    <h5>アシアル株式会社</h5>
+                </div>
+                <div class="one-member">
+                    <h5>アドビ株式会社</h5>
+                </div>
+                <div class="one-member">
+                    <h5>株式会社ラックサイバーリンク</h5>
+                </div>
+                <div class="one-member last-member">
+                    <h5>富士通クラウドテクノロジーズ株式会社</h5>
+                </div>
+            </div>
+            <div class="students member-block member-student">
+                <h4>学生代表</h4>
+                <div class="member-headline"></div>
+                <div class="one-member">
+                    <h5>津田塾大学</h5>
+                    <ul>
+                        <li>総合政策学部 小田未悠</li>
+                    </ul>
+                </div>
+                <div class="one-member">
+                    <h5>日本女子大学</h5>
+                    <ul>
+                        <li>理学部・数物情報科学科　三ヶ尻陽香</li>
+                        <li>理学部・数物情報科学科　山中萌愛</li>
+                    </ul>
+                </div>
+                <div class="one-member">
+                    <h5>東京女子大学</h5>
+                    <ul>
+                        <li>現代教養学部・コミュニケーション専攻 小澤美奈</li>
+                        <li>現代教養学部・コミュニケーション専攻 岡本望来</li>
+                    </ul>
+                </div>
+                <div class="one-member last-member">
+                    <h5>大妻女子大学</h5>
+                    <ul>
+                        <li>家政学部・ライフデザイン学科 馬場みなみ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-benefits last-section" id="event-information">
+        <div class="site-box events">
+            <div class="section-head section-head-benefits">
+                <h2>イベント</h2>
+                <img src="img/section-title-benefits.png" alt="セクションタイトル装飾">
+                <h3>Events</h3>
+            </div>
+            <div class="events-sections" id="events-generated-html">
+                <!-- ここにイベント情報が入る -->
+            </div>
+            <div class="spacer"></div>
+            <div class="event-button">
+                <a href="events.html"></a>
+                <h4>続きを見る</h4>
+            </div>
+            <div class="spacer"></div>
+        </div>
+    </div>
+
+    <div id="footer" class="bg-footer">
+        <div class="footer-content site-box">
+            <div class="footer-left-block">
+                <div class="conversion-block footer-conversion">
+                    <a href="https://inquiry.nifcloud.com/webeq/pub/mbaas/wusic-ebook" target="_blank">
+                        <div class="conversion conversion-document">
+                            <img src="img/conversion-document.png" alt="conversion-icon" class="conversion-document-icon">
+                            <p>資料のダウンロードはこちら</p>
+                            <img src="img/conversion-arrow.png" alt="conversion-arrow" class="conversion-arrow">
+                        </div>
+                    </a>
+                    <a href="entry.html">
+                        <div class="conversion conversion-entry">
+                            <img src="img/conversion-entry.png" alt="conversion-icon" class="conversion-entry-icon">
+                            <p>参加申し込みはこちら</p>
+                            <img src="img/conversion-arrow.png" alt="conversion-arrow" class="conversion-arrow">
+                        </div>
+                    </a>
+                </div>
+                <div class="footer-logo">
+                    <img src="img/footer-logo.png" alt="footer-logo">
+                    <p>連絡先| wusic@googlegroups.com<br>
+                        問い合わせ窓口| WUSIC事務局</p>
+                </div>
+            </div>
+            <div class="footer-right-block">
+                <a class="twitter-timeline" data-lang="ja" data-width="480" data-height="320" data-theme="light" data-chrome="noheader nofooter" href="https://twitter.com/wusicJP?ref_src=twsrc%5Etfw">Tweets by wusicJP</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+        <div class="copyright">
+            <a href="#">
+                <img src="img/to-top.png" alt="to-top">
+            </a>
+            <div class="copy-bar">
+                <p>&copy;女子大学生ICT駆動ソーシャルイノベーションコンソーシアム   </p>
+            </div>
+        </div>
+    </div>
+    <script src="./script/insert_event.js"></script>
+</body>
+</html>

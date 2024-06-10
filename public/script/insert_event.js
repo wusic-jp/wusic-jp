@@ -16,15 +16,12 @@ let get_object = [];
 let insert_data = '';
 
 // Firestoreからの取得並びに整形。
-db.collection('events').where('no', '!=', '').get().then((querySnapshot) => {
+db.collection('events').orderBy('date', 'desc').get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         get_object.push(doc.data());
     })
 }).then(() => {
-    const no1 = get_object.filter(data => data.no === 1);
-    const no2 = get_object.filter(data => data.no === 2);
-    const no3 = get_object.filter(data => data.no === 3);
-    const sorted_result = [no1[0], no2[0], no3[0]];
+    const sorted_result = [get_object[0], get_object[1], get_object[2]];
     console.log(sorted_result);
     return sorted_result
 }).then((sorted_result) => {

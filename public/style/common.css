@@ -880,3 +880,11 @@ body {
     height:100%;
     width: 100%;
 }
+.section_menu {
+    display: flex;
+}
+.section_menu img {
+    height: 50px;   　   
+    object-fit: cover;     /* アスペクト比を維持しつつ、コンテナに合わせる */
+    width: calc(100% / 3); /* 幅をセクションの3分の1に設定 */
+}

@@ -883,7 +883,7 @@ body {
 .section_menu {
     display: flex;
 }
-.section_menu p {
+.section_menu p,h1 {
     height: 50px;   　   
     object-fit: cover;     /* アスペクト比を維持しつつ、コンテナに合わせる */
     width: calc(100% / 3); /* 幅をセクションの3分の1に設定 */

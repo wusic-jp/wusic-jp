@@ -885,18 +885,24 @@ body {
     font-size: 15px;
 }
 .section_menu p {
-    height: 50px;   　   
-    object-fit: cover;     /* アスペクト比を維持しつつ、コンテナに合わせる */
+    height: 50px;
     width: 200px;
 }
+
+.section_menu p:first-child {
+    width: 150px;
+}
+
 .section_menu div {
     height: 50px;  
     width: 110px;
+    padding-right: 10px;
 }
-.section_menu h1 {
-    font-weight: 700;
-/*     border-bottom: 3px solid #333333; */
-    height: 50px;   　   
-    object-fit: cover;     /* アスペクト比を維持しつつ、コンテナに合わせる */
-    width: calc(100% / 3); /* 幅をセクションの3分の1に設定 */
+
+.section_menu div::after {
+    content: ",";
+}
+
+.section_menu div:last-child::after {
+    content: "";
 }

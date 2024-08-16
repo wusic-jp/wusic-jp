@@ -886,8 +886,7 @@ body {
 .section_menu p {
     height: 50px;   　   
     object-fit: cover;     /* アスペクト比を維持しつつ、コンテナに合わせる */
-    width: calc(100% / 3);
-    width: 150px;
+    width: 200px;
 }
 .section_menu div {
     height: 50px;  

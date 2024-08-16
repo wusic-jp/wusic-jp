@@ -880,3 +880,29 @@ body {
     height:100%;
     width: 100%;
 }
+.section_menu {
+    display: flex;
+    font-size: 15px;
+}
+.section_menu p {
+    height: 50px;
+    width: 200px;
+}
+
+.section_menu p:first-child {
+    width: 150px;
+}
+
+.section_menu div {
+    height: 50px;  
+    width: 110px;
+    padding-right: 10px;
+}
+
+.section_menu div::after {
+    content: ",";
+}
+
+.section_menu div:last-child::after {
+    content: "";
+}

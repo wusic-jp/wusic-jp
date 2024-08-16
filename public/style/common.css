@@ -882,6 +882,7 @@ body {
 }
 .section_menu {
     display: flex;
+    font-size: 15px;
 }
 .section_menu p {
     height: 50px;   　   
